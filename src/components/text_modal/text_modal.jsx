@@ -34,10 +34,6 @@ class TextModal extends Component {
     const { showModal, onCloseModal } = this.props
     return (
       <>
-        <Button variant="primary" onClick={onCloseModal}>
-          Launch demo modal
-        </Button>
-
         <Modal show={showModal} onHide={onCloseModal} size="lg">
           <Modal.Header closeButton>
             <Modal.Title>Here you can upload your own text and start to learn</Modal.Title>

@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Navbar } from "react-bootstrap"
+import { Navbar, Form, Button } from "react-bootstrap"
 
 import ButtonsBar from "./components/buttons_bar"
 import TextModal from "./components/text_modal"
@@ -12,7 +12,7 @@ import "./App.css"
 
 class App extends Component {
   state = {
-    showModal: true,
+    showModal: false,
     pushed: {},
     text: "There are many ways that reading helps you to learn foreign language."
   }
@@ -37,7 +37,7 @@ class App extends Component {
 
   onCloseModal = () => this.setState(() => ({ showModal: false }))
 
-  onOpenModal = () => this.setState(() => ({ showModal: false }))
+  onOpenModal = () => this.setState(() => ({ showModal: true }))
   // Upload text modal END
 
   render() {
@@ -57,12 +57,22 @@ class App extends Component {
           onCloseModal={this.onCloseModal}
         />
         <Navbar bg="dark" fixed={"top"}>
+          <Navbar.Brand href="https://en.wikibooks.org/wiki/Georgian/Alphabet" target="_blank">
+            Georgian Alphabet
+          </Navbar.Brand>
+
           <ButtonsBar
             alphabet={alphabet}
             pushed={pushed}
             pairs={pairs}
             onSelectLetter={this.onSelectLetter}
           />
+
+          <Form inline>
+            <Button variant="outline-success" onClick={this.onOpenModal}>
+              Upload Text
+            </Button>
+          </Form>
         </Navbar>
 
         <div className="App-body">

@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Container, Row, Navbar, Form, Button } from "react-bootstrap"
+import { Container, Row, Navbar, Nav, Button } from "react-bootstrap"
 
 import ButtonsBar from "./components/buttons_bar"
 import TextModal from "./components/text_modal"
@@ -63,12 +63,10 @@ class App extends Component {
           <Navbar.Brand href="https://en.wikibooks.org/wiki/Georgian/Alphabet" target="_blank">
             Georgian Alphabet
           </Navbar.Brand>
-
-          <Form inline>
-            <Button variant="outline-success" onClick={this.onOpenModal}>
-              Upload Text
-            </Button>
-          </Form>
+          <Nav className="mr-auto" />
+          <Button variant="outline-success" onClick={this.onOpenModal}>
+            Upload Text
+          </Button>
         </Navbar>
 
         <Navbar bg="dark" variant="dark" sticky={"top"} className="justify-content-center">

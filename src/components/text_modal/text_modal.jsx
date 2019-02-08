@@ -1,7 +1,19 @@
 import React, { Component } from "react"
+import PropTypes from "prop-types"
 import { Button, Modal, InputGroup, FormControl } from "react-bootstrap"
 
 class TextModal extends Component {
+  static propTypes = {
+    showModal: PropTypes.bool,
+    onUploadText: PropTypes.func,
+    onCloseModal: PropTypes.func
+  }
+  static defaultProps = {
+    showModal: false,
+    onUploadText: () => {},
+    onCloseModal: () => {}
+  }
+
   state = {
     text: ""
   }

@@ -71,7 +71,7 @@ class App extends Component {
           </Form>
         </Navbar>
 
-        <Navbar bg="dark" variant="dark" sticky={"top"}>
+        <Navbar bg="dark" variant="dark" sticky={"top"} className="justify-content-center">
           <ButtonsBar
             alphabet={alphabet}
             pushed={pushed}

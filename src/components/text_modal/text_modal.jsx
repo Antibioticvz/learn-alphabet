@@ -42,7 +42,7 @@ class TextModal extends Component {
             <InputGroup>
               <FormControl
                 as="textarea"
-                rows="20"
+                rows="17"
                 aria-label="With textarea"
                 onChange={this.onChangeText}
               />

@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { Navbar } from "react-bootstrap"
 
 import ButtonsBar from "./components/buttons_bar"
+import TextModal from "./components/text_modal"
 import pairs, { alphabet } from "./pairs/engge"
 
 import "./App.css"
@@ -38,6 +39,7 @@ class App extends Component {
 
     return (
       <>
+        <TextModal />
         <Navbar bg="dark" fixed={"top"}>
           <ButtonsBar
             alphabet={alphabet}
